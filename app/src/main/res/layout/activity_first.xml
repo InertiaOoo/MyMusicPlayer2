@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+android:background="#f3f3f3"
+    tools:context=".FirstActivity"
+    >
+
+
+    <com.mxn.soul.flowingdrawer_core.FlowingDrawer
+        xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:id="@+id/drawerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:edPosition="1"
+        app:edMenuSize="260dp"
+        app:edMenuBackground="#ffffff"
+
+
+        >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="#f3f3f3"
+
+
+        >
+        <ImageButton
+            android:id="@+id/flow_bt"
+            android:layout_weight="1"
+            android:layout_width="30dp"
+            android:background="@android:color/transparent"
+            android:layout_height="40dp"
+            android:scaleType="centerInside"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/flow3"/>
+
+        <EditText
+            android:id="@+id/search_edit"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape_corner"
+            android:layout_weight="9"
+            android:singleLine="true"
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/flow_bt"
+            android:layout_toLeftOf="@+id/search_bt"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="7dp"/>
+
+
+        <ImageButton
+            android:id="@+id/search_bt"
+            android:layout_weight="1"
+            android:layout_width="30dp"
+            android:background="@android:color/transparent"
+            android:layout_height="40dp"
+            android:scaleType="centerInside"
+android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/clean_0"/>
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+android:id="@+id/rv_log"
+        android:background="#eef7f2"
+        android:layout_width="match_parent"
+       android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/line_view"
+        android:layout_below="@+id/search_layout"
+
+        >
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+        <ListView
+            android:id="@+id/line_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/controllayout"
+
+            >
+
+        </ListView>
+
+<LinearLayout
+    android:id="@+id/controllayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#eef7f2"
+    android:layout_alignParentBottom="true"
+
+    >
+
+    <Button
+        android:id="@+id/pre_bt"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Pre"
+        android:textSize="18sp"
+        android:textColor="@drawable/button_font_style"
+        android:background="@drawable/pre_buttonstyle"
+        />
+
+    <Button
+        android:id="@+id/play_bt"
+        android:layout_weight="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonstyle2"
+        android:textSize="19sp"
+        android:textColor="@drawable/button_font_style"
+        android:text="play"/>
+
+    <Button
+        android:id="@+id/next_bt"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textColor="@drawable/button_font_style"
+        android:background="@drawable/next_buttonstyle"
+        android:textSize="18sp"
+        android:text="next"/>
+
+
+
+</LinearLayout>
+
+
+</RelativeLayout>
+
+
+    <!--menu-->
+    <com.mxn.soul.flowingdrawer_core.FlowingMenuLayout
+        android:id="@+id/menulayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <FrameLayout
+
+            android:id="@+id/id_container_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.mxn.soul.flowingdrawer_core.FlowingMenuLayout>
+
+
+
+</com.mxn.soul.flowingdrawer_core.FlowingDrawer>
+
+</RelativeLayout>
+
+
+
